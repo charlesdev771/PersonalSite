@@ -1,0 +1,45 @@
+* { margin: 0; padding: 0; font-family: system-ui-applesystem, Arial, Helvetica, sans-serif;}
+
+nav { display: flex; justify-content: space-around; align-items: center; font-family: system-ui-applesystem, Arial, Helvetica, sans-serif; background-color: #23232e; height: 8vh; height: 120px;}
+    nav img { width: 100px; height: 100px;}
+    nav a { font-size: 20px; color: #23232e; cursor: pointer;}
+
+.home {background: url(../imgs/bg1.jpg); background-size: cover; width: 100%; height: 820px; margin-top: -50px;}
+    .home h1 {font-size: 70px;}
+    .home h2 {font-size: 50px;}
+
+.about p{ text-align: justify; width: 100%;}
+    .about img{ text-align: justify; width: 100%;}
+
+
+.benefits { margin-top: 450px; background-color: #23232e}
+    .card{ display: inline-block; align-items: center; justify-content: center; width: 100%;}
+
+
+.form { background-color: #ccc; margin-top: -25px}
+    .form label { align-items: center; justify-content: center; font-size: 20px; color: #23232e;}
+    
+
+.footer { background-color: #777; margin-top: -50px;}
+    .footer img { width: 30px; height: 30px;}
+
+
+
+
+@media (min-width: 800px) 
+{
+    .about p{ text-align: justify; width: 33%;}
+    .about img{ text-align: justify; width: 33%; float: right; margin-top: -200px;}
+    .card{ display: inline-block; align-items: center; justify-content: center; width: 24%; margin-left: 0.5%;} 
+    .form label { font-size: 20px; color: #23232e; margin-left: 47%;}
+    .form input { width: 50%; margin-left: 25%;}
+    .form textarea { width: 50%; margin-left: 25%}
+    
+} 
+
+@media (min-width: 1000px) 
+{
+    .about p{ text-align: justify; width: 45%;}
+    .about img{ text-align: justify; width: 35%; float: right; height: 600px; border-radius: 20px;}
+    
+} 
