@@ -1,29 +1,28 @@
-* { margin: 0; padding: 0; font-family: system-ui-applesystem, Arial, Helvetica, sans-serif;}
 
 nav { display: flex; justify-content: space-around; align-items: center; font-family: system-ui-applesystem, Arial, Helvetica, sans-serif; background-color: #23232e; height: 8vh; height: 120px;}
-    nav img { width: 100px; height: 100px;}
-    nav a { font-size: 20px; color: #23232e; cursor: pointer;}
-
+    nav img { width: 110px; height: 110px;}
+    nav a { font-size: 30px;}
+    nav a:hover { color: rgb(43, 255, 0); font-size: 37px; cursor: pointer; border: 0.5px solid #fff;}
+    
 .home {background: url(../imgs/bg1.jpg); background-size: cover; width: 100%; height: 820px; margin-top: -50px;}
-    .home h1 {font-size: 70px;}
-    .home h2 {font-size: 50px;}
+    .home h1 {font-size: 70px; padding-top: 100px;}
+    .home h2 {font-size: 40px;}
 
 .about p{ text-align: justify; width: 100%;}
-    .about img{ text-align: justify; width: 100%;}
-
+    .about img { width: 40%;}
+    @media (min-width: 200px) 
+{
+    .about img {width: 100%;}  
+}
 
 .benefits { margin-top: 450px; background-color: #23232e}
     .card{ display: inline-block; align-items: center; justify-content: center; width: 100%;}
 
-
-.form { background-color: #ccc; margin-top: -25px}
+.form { background-color: #fff; margin-top: -25px; height: 650px;}
     .form label { align-items: center; justify-content: center; font-size: 20px; color: #23232e;}
     
-
-.footer { background-color: #777; margin-top: -50px;}
-    .footer img { width: 30px; height: 30px;}
-
-
+.footer { background-color: #333; margin-top: -50px;}
+.footer i { cursor: pointer; color: #fff;}
 
 
 @media (min-width: 800px) 
@@ -34,7 +33,6 @@ nav { display: flex; justify-content: space-around; align-items: center; font-fa
     .form label { font-size: 20px; color: #23232e; margin-left: 47%;}
     .form input { width: 50%; margin-left: 25%;}
     .form textarea { width: 50%; margin-left: 25%}
-    
 } 
 
 @media (min-width: 1000px) 

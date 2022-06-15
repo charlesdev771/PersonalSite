@@ -1,40 +1,46 @@
 <?php
 
 class Connection
-
 {
 
-    function getConn_and_incert()
+    function get_conn()
     {
-        $verification = false;
-        try {
-
-          $name = $_POST['name'];
-          $email = $_POST['email'];
-          $msg = $_POST['textArea'];
-
-          $Conn = new PDO('mysql:host=127.0.0.1;dbname=assunto', $username="root", $password="");
-          $Conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-          $stmt = $Conn->prepare('INSERT INTO msgs (name,email,msg) VALUES(:name,:email,:msg)');
-          $stmt->execute(array(
-              ':name' => $name,
-              ':email' => $email,
-              ':msg' => $msg
-            ));
-        }
-        catch (\Throwable $error) {
-            echo "Erro. Code" . $error->getMessage();
+        try 
+        {
+            $conn = new PDO('mysql:host=127.0.0.1;dbname=nome', $username = 'root', $pass='');
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        }catch (\Throwable $th) 
+        {
+            echo $th;
         }
 
-        header("location: ../home/index.php");
-
+        return $conn;
     }
 
+    function Insert_in_db($conn)
+    {
 
+        try 
+        {
+            $nome = $_POST['name'];
+            $email = $_POST['email'];
+            $texto = $_POST['textArea'];
+
+            $stmt = $conn->prepare('INSERT INTO nome (nome, email, texto) VALUES(:nome, :email, :texto');
+            $stmt->execute(array(
+                ':nome' => $nome,
+                ':email' => $email,
+                ':texto' => $texto
+            ));
+    
+            header('location: ../index.php');
+        }catch (Throwable $th)
+        {
+            echo $th;
+        }
+
+    }
 }
 
-$ex = new Connection();
-$ex->getConn_and_incert();
 
 ?>
